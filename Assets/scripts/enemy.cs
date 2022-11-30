@@ -9,7 +9,7 @@ public class enemy : MonoBehaviour
     public float speed = 5f;
     public float strarting;
 
-    float dirX = 1f;
+    float diry = 1f;
     bool isAlive = true;
 
     Animator anim;
@@ -27,17 +27,17 @@ public class enemy : MonoBehaviour
         {
 
 
-            transform.Translate(transform.right * dirX * speed * Time.deltaTime);
+            transform.Translate(transform.right * diry * speed * Time.deltaTime);
 
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right * dirX, 0.6f);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right * diry, 0.6f);
 
-            Debug.DrawRay(transform.position, transform.right * 0.6f * dirX, Color.blue);
+            Debug.DrawRay(transform.position, transform.right * 0.6f * diry, Color.blue);
 
             if (hit.collider != null)
             {
                 if (hit.collider.CompareTag("wall"))
                 {
-                    dirX *= -1f;
+                    diry *= -1f;
 
                 }
             }
