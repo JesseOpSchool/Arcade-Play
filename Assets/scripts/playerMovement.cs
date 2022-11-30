@@ -21,6 +21,11 @@ public class playerMovement : MonoBehaviour
         dirX = Input.GetAxis("Horizontal");
         dirY = Input.GetAxis("Vertical");
 
+
+    }
+
+    private void FixedUpdate()
+    {
         transform.Translate(transform.right * dirX * speed * Time.deltaTime);
         transform.Translate(transform.up * dirY * speed * Time.deltaTime);
     }
