@@ -27,18 +27,19 @@ public class enemy : MonoBehaviour
         {
 
 
-            transform.Translate(transform.right * diry * speed * Time.deltaTime);
+            transform.Translate(transform.up * diry * speed * Time.deltaTime);
 
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right * diry, 0.6f);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up * diry, 0.6f);
 
-            Debug.DrawRay(transform.position, transform.right * 0.6f * diry, Color.blue);
+            Debug.DrawRay(transform.position, transform.up * 0.6f * diry, Color.blue);
+
 
             if (hit.collider != null)
             {
                 if (hit.collider.CompareTag("wall"))
                 {
                     diry *= -1f;
-
+                    
                 }
             }
 
@@ -57,10 +58,10 @@ public class enemy : MonoBehaviour
 
     void die()
     {
-        isAlive = false;
-        anim.SetBool("IsAlive", isAlive);
-        GetComponent<BoxCollider2D>().enabled = false;
-        GetComponent<Rigidbody2D>().gravityScale = 0;
+        //isAlive = false;
+        //anim.SetBool("IsAlive", isAlive);
+        //GetComponent<BoxCollider2D>().enabled = false;
+        //GetComponent<Rigidbody2D>().gravityScale = 0;
 
     }
 }
