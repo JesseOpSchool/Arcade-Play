@@ -39,7 +39,6 @@ public class Enemy : MonoBehaviour
                 if (hit.collider.CompareTag("wall"))
                 {
                     diry *= -1f;
-                    
                 }
             }
 
@@ -58,10 +57,10 @@ public class Enemy : MonoBehaviour
 
     void die()
     {
-        //isAlive = false;
-        //anim.SetBool("IsAlive", isAlive);
-        //GetComponent<BoxCollider2D>().enabled = false;
-        //GetComponent<Rigidbody2D>().gravityScale = 0;
+        isAlive = false;
+        anim.SetBool("IsAlive", isAlive);
+        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().gravityScale = 0;
 
     }
 }
