@@ -40,4 +40,5 @@ public class EnemySpawn : MonoBehaviour
         isSpawning = false;
         GameObject newObject = Instantiate(enemy);
     }
+
 }
