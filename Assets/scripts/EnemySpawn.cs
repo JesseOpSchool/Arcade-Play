@@ -14,7 +14,7 @@ public class EnemySpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SpawnObject();
     }
 
     void Awake()
@@ -25,12 +25,12 @@ public class EnemySpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isSpawning)
-        {
-            float timer = Random.Range(minWait, maxWait);
-            Invoke("SpawnObject", timer);
-            isSpawning = true;
-        }
+        //if (!isSpawning)
+        //{
+        //    float timer = Random.Range(minWait, maxWait);
+        //    Invoke("SpawnObject", timer);
+        //    isSpawning = true;
+        //}
 
     }
 

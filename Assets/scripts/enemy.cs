@@ -32,5 +32,10 @@ public class Enemy : MonoBehaviour
        
     }
 
-  
+    public void turnOfAnimation()
+    {
+        GetComponent<Animator>().enabled = false;
+        
+    }
+
 }
