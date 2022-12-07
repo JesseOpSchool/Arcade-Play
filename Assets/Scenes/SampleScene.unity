@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 363292797}
   m_Layer: 0
   m_Name: Border Right
-  m_TagString: wall
+  m_TagString: enemy wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -753,8 +753,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 9211644312040481434, guid: 5f43188c5c4ceb442a652d7440f661d1, type: 3}
-  minWait: 5
-  maxWait: 15
+  minWait: 1
+  maxWait: 1
 --- !u!1 &1993273552
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3683787894015286996, guid: fdaadcf22337cdc47b4dd20abd874072, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.51
+      value: -7.26
       objectReference: {fileID: 0}
     - target: {fileID: 3683787894015286996, guid: fdaadcf22337cdc47b4dd20abd874072, type: 3}
       propertyPath: m_LocalPosition.y

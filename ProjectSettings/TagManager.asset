@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - wall
+  - enemy wall
+  - enemy
   layers:
   - Default
   - TransparentFX
