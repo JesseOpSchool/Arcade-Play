@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     float dirY;
 
 
+    //bullet
+    public GameObject bullet;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,10 @@ public class PlayerMovement : MonoBehaviour
         dirX = Input.GetAxis("Horizontal");
         dirY = Input.GetAxis("Vertical");
 
+        if (Input.GetButtonDown("Fire1"))
+        {
+            GameObject spawnedBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        }
 
     }
 
