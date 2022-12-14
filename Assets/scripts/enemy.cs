@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponentInChildren<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
 
     public void trunOffAnimation()
     {
-        GetComponent<Animator>().enabled = false;
+        //GetComponent<Animator>().enabled = false;
     }
     public void takeDamage()
     {
@@ -40,8 +40,10 @@ public class Enemy : MonoBehaviour
 
     void die()
     {
+        Debug.Log("die");
         anim.SetBool("IsAlive", false);
-        //GetComponent<BoxCollider2D>().enabled = false;
-        Destroy(gameObject, 1.5f);
+        GetComponent<BoxCollider2D>().enabled = false;
+        Destroy(gameObject, 0.5f);
     }
+
 }
