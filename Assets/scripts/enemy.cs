@@ -24,10 +24,6 @@ public class Enemy : MonoBehaviour
 
     }
 
-    public void trunOffAnimation()
-    {
-        //GetComponent<Animator>().enabled = false;
-    }
     public void takeDamage()
     {
         Debug.Log("hit the enemy");
